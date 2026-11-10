@@ -1,0 +1,215 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f4f4;
+    color: #222;
+    line-height: 1.5;
+}
+
+header {
+    background: #2c3e50;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+}
+
+header h1 {
+    font-size: 20px;
+    margin: 0;
+    margin-right: auto;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+main {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+h2 {
+    font-size: 22px;
+    margin-top: 0;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+section,
+.card {
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 15px;
+}
+
+label {
+    display: block;
+    margin: 8px 0 4px;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 7px;
+    border: 1px solid #bbb;
+    font: inherit;
+}
+
+textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+button {
+    padding: 7px 14px;
+    border: 1px solid #2c3e50;
+    background: #2c3e50;
+    color: #fff;
+    cursor: pointer;
+    font: inherit;
+    margin: 4px 4px 4px 0;
+}
+
+button:hover {
+    background: #1a252f;
+}
+
+button.secondary {
+    background: #fff;
+    color: #2c3e50;
+}
+
+button.danger {
+    background: #b03030;
+    border-color: #b03030;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: flex-end;
+}
+
+.row > div {
+    flex: 1;
+    min-width: 150px;
+}
+
+.muted {
+    color: #666;
+    font-size: 14px;
+}
+
+.error {
+    color: #b03030;
+    font-weight: bold;
+}
+
+.success {
+    color: #2e7d32;
+    font-weight: bold;
+}
+
+.badge {
+    display: inline-block;
+    padding: 1px 7px;
+    border: 1px solid #999;
+    background: #eee;
+    font-size: 12px;
+    border-radius: 3px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 6px;
+    text-align: left;
+    vertical-align: top;
+}
+
+th {
+    background: #eee;
+}
+
+ul.plain {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul.plain li {
+    border-bottom: 1px solid #eee;
+    padding: 8px 0;
+}
+
+ul.plain li.unread {
+    font-weight: bold;
+}
+
+.notifications {
+    position: relative;
+}
+
+.notifications summary {
+    cursor: pointer;
+    color: #fff;
+}
+
+.notifications .panel {
+    position: absolute;
+    right: 0;
+    top: 25px;
+    width: 320px;
+    max-height: 400px;
+    overflow: auto;
+    background: #fff;
+    color: #222;
+    border: 1px solid #999;
+    padding: 10px;
+    z-index: 10;
+}
+
+a {
+    color: #1a5fb4;
+}
+
+.hidden {
+    display: none;
+}

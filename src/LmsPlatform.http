@@ -1,6 +1,4 @@
 @LmsPlatform_HostAddress = http://localhost:5221
 
-GET {{LmsPlatform_HostAddress}}/weatherforecast/
+GET {{LmsPlatform_HostAddress}}/api/health
 Accept: application/json
-
-###

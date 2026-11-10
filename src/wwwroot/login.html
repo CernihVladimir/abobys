@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Вход — LMS Платформа</title>
+    <link rel="stylesheet" href="/css/site.css">
+</head>
+<body data-page="login">
+<header>
+    <h1>LMS Платформа</h1>
+    <nav id="nav"></nav>
+</header>
+
+<main>
+    <div class="grid">
+        <section>
+            <h2>Вход</h2>
+            <form id="loginForm">
+                <label>Email</label>
+                <input type="email" name="email" required>
+                <label>Пароль</label>
+                <input type="password" name="password" required>
+                <button type="submit">Войти</button>
+            </form>
+            <p id="loginMessage"></p>
+        </section>
+
+        <section>
+            <h2>Регистрация</h2>
+            <form id="registerForm">
+                <label>ФИО</label>
+                <input type="text" name="fullName" required>
+                <label>Email</label>
+                <input type="email" name="email" required>
+                <label>Пароль</label>
+                <input type="password" name="password" required minlength="6">
+                <label>Роль</label>
+                <select name="role">
+                    <option value="Student">Студент</option>
+                    <option value="Teacher">Преподаватель</option>
+                </select>
+                <button type="submit">Зарегистрироваться</button>
+            </form>
+            <p id="registerMessage"></p>
+        </section>
+    </div>
+</main>
+
+<script src="/js/app.js"></script>
+</body>
+</html>

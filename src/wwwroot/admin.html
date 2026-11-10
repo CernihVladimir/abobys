@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Админка — LMS Платформа</title>
+    <link rel="stylesheet" href="/css/site.css">
+</head>
+<body data-page="admin">
+<header>
+    <h1>LMS Платформа</h1>
+    <nav id="nav"></nav>
+    <details class="notifications" id="notifications" hidden>
+        <summary>Уведомления (<span id="unread">0</span>)</summary>
+        <div class="panel" id="notificationList"></div>
+    </details>
+</header>
+
+<main>
+    <section>
+        <h2>Статистика</h2>
+        <div id="stats"><p class="muted">Загрузка...</p></div>
+    </section>
+
+    <section>
+        <h2>Пользователи</h2>
+        <form id="userFilter">
+            <div class="row">
+                <div>
+                    <label>Поиск</label>
+                    <input type="search" name="search" placeholder="ФИО или email">
+                </div>
+                <div>
+                    <label>Роль</label>
+                    <select name="role">
+                        <option value="">Все</option>
+                        <option value="Admin">Администратор</option>
+                        <option value="Teacher">Преподаватель</option>
+                        <option value="Student">Студент</option>
+                    </select>
+                </div>
+            </div>
+        </form>
+        <div id="users"><p class="muted">Загрузка...</p></div>
+    </section>
+
+    <section>
+        <h2>Создать пользователя</h2>
+        <form id="userForm">
+            <div class="row">
+                <div><label>ФИО</label><input type="text" name="fullName" required></div>
+                <div><label>Email</label><input type="email" name="email" required></div>
+            </div>
+            <div class="row">
+                <div><label>Пароль</label><input type="password" name="password" required minlength="6"></div>
+                <div>
+                    <label>Роль</label>
+                    <select name="role">
+                        <option value="Student">Студент</option>
+                        <option value="Teacher">Преподаватель</option>
+                        <option value="Admin">Администратор</option>
+                    </select>
+                </div>
+            </div>
+            <button type="submit">Создать</button>
+        </form>
+    </section>
+</main>
+
+<script src="/js/app.js"></script>
+</body>
+</html>

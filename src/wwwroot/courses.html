@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Курсы — LMS Платформа</title>
+    <link rel="stylesheet" href="/css/site.css">
+</head>
+<body data-page="courses">
+<header>
+    <h1>LMS Платформа</h1>
+    <nav id="nav"></nav>
+    <details class="notifications" id="notifications" hidden>
+        <summary>Уведомления (<span id="unread">0</span>)</summary>
+        <div class="panel" id="notificationList"></div>
+    </details>
+</header>
+
+<main>
+    <section>
+        <h2>Курсы</h2>
+        <form id="filterForm">
+            <div class="row">
+                <div>
+                    <label>Поиск</label>
+                    <input type="search" name="search" placeholder="Название или описание">
+                </div>
+                <div>
+                    <label>Статус</label>
+                    <select name="status">
+                        <option value="">Все</option>
+                        <option value="Draft">Черновик</option>
+                        <option value="PendingReview">На проверке</option>
+                        <option value="Published">Опубликован</option>
+                        <option value="Rejected">Отклонён</option>
+                    </select>
+                </div>
+                <div>
+                    <label><input type="checkbox" name="mine" style="width:auto"> Только мои</label>
+                </div>
+            </div>
+        </form>
+    </section>
+
+    <section id="moderation" class="hidden"></section>
+
+    <section id="createCourseBox" class="hidden">
+        <h2>Создать курс</h2>
+        <form id="createCourseForm">
+            <label>Название</label>
+            <input type="text" name="title" required>
+            <label>Описание</label>
+            <textarea name="description"></textarea>
+            <label>Теория</label>
+            <textarea name="theoryContent"></textarea>
+            <label>Ссылки на видео (по одной в строке)</label>
+            <textarea name="videoUrls"></textarea>
+            <label>Ссылки на презентации (по одной в строке)</label>
+            <textarea name="presentationUrls"></textarea>
+            <button type="submit">Создать</button>
+        </form>
+        <p id="createCourseMessage"></p>
+    </section>
+
+    <div id="courseList" class="grid"></div>
+</main>
+
+<script src="/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LMS Платформа</title>
+    <link rel="stylesheet" href="/css/site.css">
+</head>
+<body data-page="index">
+<header>
+    <h1>LMS Платформа</h1>
+    <nav id="nav"></nav>
+    <details class="notifications" id="notifications" hidden>
+        <summary>Уведомления (<span id="unread">0</span>)</summary>
+        <div class="panel" id="notificationList"></div>
+    </details>
+</header>
+
+<main>
+    <section>
+        <h2>Учебная платформа</h2>
+        <p>Курсы, задания и проверка решений для преподавателей и студентов.</p>
+        <div id="welcome"></div>
+    </section>
+
+    <section>
+        <h2>Демо-аккаунты</h2>
+        <table>
+            <tr><th>Роль</th><th>Email</th><th>Пароль</th></tr>
+            <tr><td>Администратор</td><td>admin@lms.local</td><td>Admin123!</td></tr>
+            <tr><td>Преподаватель</td><td>teacher@lms.local</td><td>Teacher123!</td></tr>
+            <tr><td>Студент</td><td>student@lms.local</td><td>Student123!</td></tr>
+        </table>
+    </section>
+</main>
+
+<script src="/js/app.js"></script>
+</body>
+</html>
